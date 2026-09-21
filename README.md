@@ -218,7 +218,7 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 ## 📫 Contact
 
 - **Email:** [addicto1122@gmail.com](mailto:addicto1122@gmail.com)
-- **Notion** [github.com/addicto1122-lab]([https://github.com/addicto1122-lab](https://app.notion.com/p/3e1a87937d55813d8edafd73f05f27ea))
+- **Notion:** [Notion Portfolio](https://app.notion.com/p/3e1a87937d55813d8edafd73f05f27ea)
 
 > 기능 하나만 바라보기보다 데이터베이스, 애플리케이션, 서버와 네트워크가  
 > 어떻게 연결되는지 이해하며 서비스의 안정성과 효율을 높이겠습니다.
