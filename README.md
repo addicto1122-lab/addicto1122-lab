@@ -216,18 +216,6 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=addicto1122-lab&show_icons=true&theme=tokyonight&hide_border=true&locale=kr)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=addicto1122-lab&layout=compact&theme=tokyonight&hide_border=true)
-
-</div>
-
----
-
 ## 📫 Contact
 
 - **Email:** [addicto1122@gmail.com](mailto:addicto1122@gmail.com)
