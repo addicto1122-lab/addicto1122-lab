@@ -8,7 +8,6 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 기능 구현뿐만 아니라 **애플리케이션부터 서버·네트워크까지  
 전체 흐름을 이해하는 개발자**를 목표로 하고 있습니다.
 
-[![GitHub](https://img.shields.io/badge/GitHub-addicto1122--lab-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/addicto1122-lab)
 [![Email](https://img.shields.io/badge/Email-addicto1122%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:addicto1122@gmail.com)
 
 </div>
