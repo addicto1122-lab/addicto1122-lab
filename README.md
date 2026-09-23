@@ -3,7 +3,7 @@
 ### 백엔드 개발과 인프라를 함께 공부하고 있습니다.
 
 Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며  
-Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가지고 있습니다.
+Linux, Docker, 네트워크 등 서비스가 운영되는 환경에도 관심을 가지고 있습니다.
 
 기능 구현뿐만 아니라 **애플리케이션부터 서버·네트워크까지  
 전체 흐름을 이해하는 개발자**를 목표로 하고 있습니다.
@@ -25,13 +25,13 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 ![MyBatis](https://img.shields.io/badge/MyBatis-BE3939?style=flat-square)
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
 ![STOMP](https://img.shields.io/badge/STOMP-6A5ACD?style=flat-square)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
 - Java 17 기반 객체지향 프로그래밍
 - Spring MVC 기반 웹 애플리케이션 및 REST API 구현
-- Spring Security, JWT, OAuth 2.0을 활용한 인증·인가
-- WebSocket과 STOMP를 활용한 실시간 기능 구현
-- 외부 API 응답 가공, 호출 제어 및 결과 재사용
+- Spring Security, JWT 기반 인증·인가 기능 구현
+- WebSocket, STOMP 기반 실시간 기능 구현
+- 외부 API 연동 및 응답 데이터 가공
+- 외부 API 호출 제어 및 조회 결과 재사용 로직 구현
 
 ### Database
 
@@ -43,7 +43,7 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 - SQL, JOIN, Dynamic SQL 작성
 - 관계형 데이터 모델링 및 CRUD 구현
 - 외부 API 조회 결과 저장 및 재사용
-- 변경된 데이터만 다시 계산하는 부분 갱신 적용
+- 변경된 데이터만 다시 계산하는 부분 갱신 로직 적용
 
 ### Infrastructure
 
@@ -51,11 +51,12 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![VMware](https://img.shields.io/badge/VMware-607078?style=flat-square&logo=vmware&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
 - Ubuntu, Rocky Linux, CentOS 기반 서버 환경 구성
 - Docker 및 Docker Compose 기반 애플리케이션 실행
 - Docker Swarm 클러스터 구성
-- NCP Server, Subnet, ACG 구성
+- Kubernetes 3-Node 클러스터 구축 실습
 - AWS VPC, ELB, S3 실습
 - VMware Workstation Pro 및 ESXi 가상화 환경 구성
 - NAT, Firewall, Routing, VLAN 네트워크 실습
@@ -103,7 +104,6 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 - MyBatis·MySQL 기반 계산 결과 저장 및 재사용
 - Naver Maps API 기반 이동 경로 시각화
 - WebSocket·STOMP 기반 실시간 기능
-- Redis 활용
 
 #### 기술 스택
 
@@ -123,14 +123,14 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 
 **문제**
 
-- 여러 ODsay API 요청을 지연 없이 직렬로 호출하면 오류가 발생했습니다.
-- 요청마다 1.1초의 간격을 적용하자 오류는 줄었지만, 직렬 처리로 인해 사용자의 대기 시간이 길어졌습니다.
+- 여러 ODsay API 요청을 지연 없이 연속으로 호출할 경우 오류가 발생했습니다.
+- 요청마다 1.1초의 간격을 적용하자 오류는 줄었지만, 순차 처리로 인해 전체 계산 시간이 길어졌습니다.
 
 **해결**
 
-- 애플리케이션 서버와 ODsay 사이에 사설 프록시 서버를 구성했습니다.
+- 애플리케이션 서버와 ODsay 사이에 별도의 프록시 서버를 구성했습니다.
 - 애플리케이션 서버에서 프록시 서버까지는 요청을 지연 없이 전달했습니다.
-- 프록시 서버에서는 최대 5개의 요청을 병렬로 처리하도록 구성했습니다.
+- 프록시 서버에서 최대 5개의 요청을 병렬로 처리하도록 구성했습니다.
 - ODsay로 전달되는 요청에는 1.1초 간격을 적용해 연속 호출 오류를 방지했습니다.
 
 **결과**
@@ -144,17 +144,17 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 **문제**
 
 - ODsay API의 일일 호출 한도가 1,000건에서 30건으로 감소했습니다.
-- 모든 참가자의 경로를 매번 다시 계산하면 제한된 호출량을 빠르게 소진했습니다.
+- 모든 참가자의 경로를 매번 다시 계산할 경우 제한된 호출량을 빠르게 소진하는 문제가 있었습니다.
 
 **해결**
 
-- 기존 API 호출 결과를 저장할 수 있도록 DB 컬럼을 추가했습니다.
+- 기존 API 호출 결과를 저장할 수 있도록 DB 구조를 수정했습니다.
 - 이미 계산한 경로와 막차 정보를 재사용하도록 변경했습니다.
-- 참가자의 귀가 장소 또는 희망 장소가 변경된 경우, 해당 참가자의 변경된 장소에 대해서만 다시 계산했습니다.
+- 참가자의 귀가 장소 또는 희망 장소가 변경된 경우 해당 참가자의 변경된 데이터만 다시 계산하도록 구성했습니다.
 
 **결과**
 
-- 중복 호출을 줄이고 제한된 API 호출량 안에서 서비스를 운영할 수 있도록 개선했습니다.
+- 중복 API 호출을 줄이고 제한된 호출량 안에서 필요한 경로 계산을 수행할 수 있도록 개선했습니다.
 
 ---
 
@@ -162,17 +162,17 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 
 **문제**
 
-- ODsay API 호출 시 출발지와 목적지 사이의 거리가 700m 미만이면 정상적인 경로를 반환하지 못하는 문제를 확인했습니다.
+- 출발지와 목적지 사이의 거리가 700m 미만인 경우 ODsay API에서 정상적인 대중교통 경로를 반환하지 못하는 문제가 발생했습니다.
 
 **해결**
 
-- Kakao Local API에서 얻은 X·Y 좌표를 이용해 두 지점 사이의 직선거리를 먼저 계산했습니다.
+- Kakao Local API에서 얻은 좌표를 이용해 두 지점 사이의 직선거리를 먼저 계산했습니다.
 - 직선거리가 700m 미만이면 ODsay API를 호출하지 않고 도보 이동으로 처리했습니다.
-- 도보 이동의 평균 귀가시간은 10분으로 적용했습니다.
+- 도보 이동 시간은 10분으로 적용했습니다.
 
 **결과**
 
-- 단거리 이동에서 발생하는 API 오류를 방지하고 불필요한 호출을 줄였습니다.
+- 단거리 이동에서 발생하는 API 오류를 방지하고 불필요한 외부 API 호출을 줄였습니다.
 
 ---
 
@@ -180,16 +180,16 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 
 **문제**
 
-- 자정 이후의 막차 시간이 같은 날짜 기준으로 처리되어 귀가 가능 여부가 잘못 계산되는 문제가 발생했습니다.
+- 자정 이후의 막차 시간이 같은 날짜 기준으로 계산되어 귀가 가능 여부가 잘못 판단되는 문제가 발생했습니다.
 
 **해결**
 
-- API 응답의 시간값과 날짜 계산 흐름을 추적했습니다.
-- 자정 이후 시간에는 날짜 보정 로직을 적용해 다음 날 시간으로 계산했습니다.
+- API 응답의 시간값과 날짜 계산 흐름을 확인했습니다.
+- 자정 이후 시간에 날짜 보정 로직을 적용해 다음 날 시간으로 계산하도록 수정했습니다.
 
 **결과**
 
-- 참가자의 실제 귀가 가능 여부를 더 정확하게 판단할 수 있게 되었습니다.
+- 자정 이후 막차를 포함한 참가자의 실제 귀가 가능 여부를 올바르게 계산할 수 있도록 개선했습니다.
 
 </details>
 
@@ -197,17 +197,24 @@ Linux, Docker, Network 등 서비스가 운영되는 환경에도 관심을 가�
 
 ## 🖥 Infrastructure Experience
 
-- Linux 서버 설치 및 기본 환경 구성
-- Docker 기반 애플리케이션 실행
-- Docker Compose를 활용한 서비스 구성
+- WEB · WAS · DB 3-Tier 서버 환경 구성
+- BIND DNS 기반 도메인 구성 및 DNS 질의 검증
+- 본사 Master DNS · 지사 Secondary DNS 구성 및 Zone Transfer 실습
+- VyOS 및 CentOS Router 기반 NAT, Firewall, Routing 구성
+- VMware Workstation Pro 기반 가상 네트워크 환경 구성
+- VMware ESXi 기반 VM 생성 및 관리
+- TrueNAS iSCSI 스토리지를 ESXi Datastore로 구성
+- vMotion을 활용한 VM 호스트 간 마이그레이션 실습
+- Docker Compose 기반 멀티 컨테이너 환경 구성
 - Docker Swarm 클러스터 구성
-- NCP Server, Subnet, ACG 구성
+- Kubernetes 3-Node 클러스터 구축
+  - kubeadm 기반 Control Plane / Worker Node 구성
+  - Calico CNI 설치
+  - Node / Pod 상태 확인 및 트러블슈팅
+- GNS3 기반 네트워크 토폴로지 구성
+- DHCP, RIP, OSPF, HSRP, VLAN 실습
+- UTM 및 VPN 구성 실습
 - AWS VPC, ELB, S3 실습
-- NAT, Firewall, Static·Dynamic Routing 실습
-- DHCP, RIP, OSPF, HSRP, VLAN 구성
-- GNS3 기반 네트워크 토폴로지 구축
-- UTM 및 VPN 구성
-- VMware Workstation Pro, ESXi 가상화 환경 구축
 
 ---
 
