@@ -1,12 +1,12 @@
 <div align="center">
 
-### 백엔드 개발과 인프라를 함께 공부하고 있습니다.
+### 백엔드 개발과 운영 인프라를 함께 경험하고 있습니다.
 
 Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며  
-Linux, Docker, 네트워크 등 서비스가 운영되는 환경에도 관심을 가지고 있습니다.
+구현한 서비스를 AWS에 배포하고 백업·모니터링·장애 알림까지 직접 검증했습니다.
 
 기능 구현뿐만 아니라 **애플리케이션부터 서버·네트워크까지  
-전체 흐름을 이해하는 개발자**를 목표로 하고 있습니다.
+전체 흐름을 이해하고 운영할 수 있는 개발자**를 목표로 하고 있습니다.
 
 [![Email](https://img.shields.io/badge/Email-addicto1122%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:addicto1122@gmail.com)
 
@@ -18,62 +18,68 @@ Linux, Docker, 네트워크 등 서비스가 운영되는 환경에도 관심을
 
 ### Backend
 
-![Java](https://img.shields.io/badge/Java_17-007396?style=flat-square&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Java](https://img.shields.io/badge/Java_21-007396?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Spring MVC](https://img.shields.io/badge/Spring_MVC-6DB33F?style=flat-square&logo=spring&logoColor=white)
 ![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring&logoColor=white)
 ![MyBatis](https://img.shields.io/badge/MyBatis-BE3939?style=flat-square)
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
 ![STOMP](https://img.shields.io/badge/STOMP-6A5ACD?style=flat-square)
 
-- Java 17 기반 객체지향 프로그래밍
-- Spring MVC 기반 웹 애플리케이션 및 REST API 구현
-- Spring Security, JWT 기반 인증·인가 기능 구현
-- WebSocket, STOMP 기반 실시간 기능 구현
-- 외부 API 연동 및 응답 데이터 가공
-- 외부 API 호출 제어 및 조회 결과 재사용 로직 구현
+- Java 21·Spring Boot 기반 REST API와 웹 애플리케이션 구현
+- Spring Security·JWT HttpOnly 쿠키 기반 인증·인가 및 CSRF 보호 구현
+- Refresh Token Rotation, 세션 무효화 및 인증 재발급 흐름 구현
+- Spring Data JPA·MyBatis 기반 데이터 접근 계층 구현
+- Transactional Outbox와 재시도를 활용한 데이터 정합성 개선
+- WebSocket·STOMP 기반 실시간 기능 및 외부 API 연동
 
 ### Database
 
 ![MySQL](https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB_8-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white)
 
-- MyBatis 기반 데이터 조회 및 저장
-- SQL, JOIN, Dynamic SQL 작성
-- 관계형 데이터 모델링 및 CRUD 구현
-- 외부 API 조회 결과 저장 및 재사용
-- 변경된 데이터만 다시 계산하는 부분 갱신 로직 적용
+- 관계형 데이터 모델링, SQL·JOIN·Dynamic SQL 및 CRUD 구현
+- Flyway 기반 스키마 버전 관리와 운영 DB 마이그레이션
+- MongoDB 기반 AI 추천 생성 로그 관리
+- MySQL·MongoDB 간 삭제 정합성을 고려한 Outbox 처리
+- 외부 API 조회 결과 저장·재사용 및 변경 데이터 부분 갱신
 
 ### Infrastructure
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![VMware](https://img.shields.io/badge/VMware-607078?style=flat-square&logo=vmware&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
-- Ubuntu, Rocky Linux, CentOS 기반 서버 환경 구성
-- Docker 및 Docker Compose 기반 애플리케이션 실행
-- Docker Swarm 클러스터 구성
-- Kubernetes 3-Node 클러스터 구축 실습
-- AWS VPC, ELB, S3 실습
-- VMware Workstation Pro 및 ESXi 가상화 환경 구성
-- NAT, Firewall, Routing, VLAN 네트워크 실습
+- AWS EC2 4대 기반 WEB·WAS·MySQL·MongoDB 분리 운영
+- VPC·Private Subnet·NAT Gateway 기반 네트워크 구성
+- Docker·Caddy·Nginx 기반 컨테이너 배포와 HTTPS Reverse Proxy 구성
+- GitHub Actions·GHCR·AWS Systems Manager 기반 CI/CD 자동화
+- S3 백업·복원 검증 및 Grafana Cloud 모니터링·장애 알림 구성
+- Docker Swarm 및 Kubernetes 3-Node 클러스터 구축 실습
 
 ### Frontend
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square)
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 
-- HTML5, CSS, JavaScript 기반 화면 구현
-- React, React Router, Hooks 활용
-- jQuery, AJAX, Bootstrap 활용
-- Naver Maps API 기반 이동 경로 시각화
+- React·React Router·Hooks 기반 반응형 화면 구현
+- Recharts 기반 월간 감정·행동 통계 시각화
+- 공통 Fetch 함수 기반 인증 재발급 및 CSRF 헤더 처리
+- jQuery·AJAX·Bootstrap 및 Naver Maps API 활용 경험
 
 ---
 
@@ -81,10 +87,105 @@ Linux, Docker, 네트워크 등 서비스가 운영되는 환경에도 관심을
 
 - 💻 **Development** · [Development Portfolio](https://lying-sauce-1dc.notion.site/3e1a87937d55813d8edafd73f05f27ea?source=copy_link)
 - 🖥️ **Infrastructure** · [Infrastructure Portfolio](https://lying-sauce-1dc.notion.site/3e2a87937d55818eb0dbf06167cf1578?source=copy_link)
+- 🌿 **Mood&Move** · [Project Portfolio](https://app.notion.com/p/3faa87937d5581bd929be033523a59c6)
 
 ---
 
-## 🚀 Main Project
+## 🚀 Main Projects
+
+### [Mood&Move｜감정 기록·AI 행동 추천 서비스](https://github.com/addicto1122-lab/mood-and-move)
+
+> 사용자의 감정과 상황을 기록하고 AI가 실천 가능한 행동을 추천하며,  
+> 행동 전후의 기분 변화를 다음 추천과 월간 통계에 반영하는 서비스입니다.
+
+**프로젝트 기간:** 2026.09.29 ~ 2026.10.17  
+**수행 인원:** 3명  
+**서비스:** [moodandmove.today](https://moodandmove.today)  
+**담당 역할:** JWT 쿠키 인증·CSRF 보호·회원/계정 복구·온보딩·통계 UI·회원 탈퇴 Outbox·AWS 운영 인프라
+
+#### 주요 기능
+
+- 감정·일기 기록과 Gemini 기반 행동 3개 추천
+- 행동 선택·실천 후 기분 재측정 및 개인화 통계 반영
+- 이메일 인증, 일반 로그인, 카카오 OAuth 및 비밀번호 재설정
+- JWT HttpOnly 쿠키 인증, Access/Refresh Token 재발급 및 CSRF 보호
+- 캘린더·월간 통계·마이페이지와 7일 탈퇴 유예·계정 복구
+- AWS 기반 HTTPS 서비스 운영과 자동 배포·백업·모니터링
+
+#### 개인 구현
+
+- 이메일 가입 인증·비밀번호 재설정·카카오 OAuth·계정 복구 흐름 구현
+- Refresh Token SHA-256 해시 저장·Rotation·폐기, `tokenVersion` 기반 세션 무효화
+- `/api/csrf` 토큰 발급과 프론트 `csrfFetch()` 공통 처리로 `XSRF-TOKEN` 쿠키·`X-XSRF-TOKEN` 헤더 검증 적용
+- 동시 401 요청의 토큰 재발급 중복 방지와 재발급 후 원 요청 자동 재시도 구현
+- 회원 탈퇴 시 MySQL·MongoDB 정합성을 위한 행 잠금·Transactional Outbox·삭제 재시도 구성
+- AWS EC2 4대 분리 배포, GitHub Actions 자동 배포, S3 백업·복원, Grafana 모니터링·장애 알림 구성
+
+#### 기술 스택
+
+![Java](https://img.shields.io/badge/Java_21-007396?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot_4.1.1-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![MySQL](https://img.shields.io/badge/MySQL_8-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB_8-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS_EC2-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+<details>
+<summary><strong>🔧 주요 설계·운영 경험 펼쳐보기</strong></summary>
+
+<br>
+
+#### 1. 쿠키 기반 JWT 인증과 CSRF 보호
+
+**문제**
+
+- HttpOnly 쿠키는 토큰의 JavaScript 접근을 제한하지만 브라우저가 쿠키를 자동 전송하므로 상태 변경 요청에 대한 CSRF 방어가 필요했습니다.
+
+**해결**
+
+- Spring Security CSRF 보호를 활성화하고 `/api/csrf`에서 `XSRF-TOKEN` 쿠키를 발급했습니다.
+- 프론트 공통 요청 함수가 상태 변경 요청에 `X-XSRF-TOKEN` 헤더를 자동 첨부하도록 구성했습니다.
+- 로그인·로그아웃·토큰 재발급 흐름을 함께 검증했습니다.
+
+**결과**
+
+- JWT HttpOnly 쿠키 인증을 유지하면서 상태 변경 요청에 대한 CSRF 검증을 적용했습니다.
+
+---
+
+#### 2. MySQL·MongoDB 회원 탈퇴 정합성 개선
+
+**문제**
+
+- 서로 다른 데이터베이스의 삭제를 하나의 트랜잭션으로 처리할 수 없어 한쪽만 삭제될 위험이 있었습니다.
+
+**해결**
+
+- MySQL 사용자 삭제와 Outbox 작업 저장을 동일한 트랜잭션으로 처리했습니다.
+- MongoDB 삭제는 별도 스케줄러가 수행하고 실패 시 지수 백오프로 재시도하도록 구성했습니다.
+
+**결과**
+
+- 일시적인 삭제 실패가 발생해도 작업이 유실되지 않고 다시 처리될 수 있도록 개선했습니다.
+
+---
+
+#### 3. AWS 운영 환경 구축
+
+- WEB·WAS·MySQL·MongoDB를 EC2 4대로 분리하고 VPC·Private Subnet·NAT Gateway를 구성했습니다.
+- Caddy·Nginx·Docker로 HTTPS 요청과 프론트엔드·API 트래픽을 분리했습니다.
+- GitHub Actions·GHCR·AWS Systems Manager로 빌드·테스트·이미지 배포를 자동화했습니다.
+- MySQL·MongoDB 백업을 S3에 보관하고 임시 DB 복원과 원본 비교를 검증했습니다.
+- Grafana Cloud에서 4대 서버 지표를 수집하고 Synthetic Monitoring 장애 알림의 발생·복구를 확인했습니다.
+
+</details>
+
+**상세 문서:** [Mood&Move 포트폴리오](https://app.notion.com/p/3faa87937d5581bd929be033523a59c6)
+
+---
 
 ### [MeetBack｜모두가 안전하게 귀가할 수 있는 모임 장소 추천 서비스](https://github.com/addicto1122-lab/meetback)
 
@@ -214,6 +315,17 @@ Linux, Docker, 네트워크 등 서비스가 운영되는 환경에도 관심을
 ---
 
 ## 🖥 Infrastructure Experience
+
+### Service Operation
+
+- AWS EC2 4대에 WEB·WAS·MySQL·MongoDB 역할 분리
+- VPC, Public/Private Subnet, NAT Gateway 기반 네트워크 구성
+- Caddy·Nginx 기반 HTTPS와 Reverse Proxy 구성
+- GitHub Actions·GHCR·AWS Systems Manager 기반 자동 배포
+- MySQL·MongoDB 백업의 S3 보관 및 임시 DB 복원 검증
+- Grafana Cloud 시스템 지표 수집과 Synthetic Monitoring 장애 알림 검증
+
+### Lab & Training
 
 - WEB · WAS · DB 3-Tier 서버 환경 구성
 - BIND DNS 기반 도메인 구성 및 DNS 질의 검증
