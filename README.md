@@ -93,7 +93,10 @@ Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며
 
 ## 🚀 Main Projects
 
-### [Mood&Move｜감정 기록·AI 행동 추천 서비스](https://github.com/addicto1122-lab/mood-and-move)
+<h3>
+  <img src="https://raw.githubusercontent.com/addicto1122-lab/mood-and-move/main/frontend/public/favicon.png" width="32" height="32" alt="Mood&Move" align="absmiddle">
+  <a href="https://github.com/addicto1122-lab/mood-and-move">Mood&Move｜감정 기록·AI 행동 추천 서비스</a>
+</h3>
 
 > 사용자의 감정과 상황을 기록하고 AI가 실천 가능한 행동을 추천하며,  
 > 행동 전후의 기분 변화를 다음 추천과 월간 통계에 반영하는 서비스입니다.
@@ -187,7 +190,10 @@ Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며
 
 ---
 
-### [MeetBack｜모두가 안전하게 귀가할 수 있는 모임 장소 추천 서비스](https://github.com/addicto1122-lab/meetback)
+<h3>
+  <img src="https://raw.githubusercontent.com/addicto1122-lab/meetback/main/src/main/resources/static/images/meetback-logo.svg" width="32" height="32" alt="MeetBack" align="absmiddle">
+  <a href="https://github.com/addicto1122-lab/meetback">MeetBack｜모두가 안전하게 귀가할 수 있는 모임 장소 추천 서비스</a>
+</h3>
 
 > 여러 참가자의 귀가 시간과 막차 정보를 분석해  
 > 모두가 안전하게 귀가할 수 있는 모임 장소를 추천하는 서비스입니다.
