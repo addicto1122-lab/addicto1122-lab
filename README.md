@@ -318,6 +318,8 @@ Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며
 
 </details>
 
+**상세 문서:** [MeetBack 포트폴리오](https://app.notion.com/p/3e1a87937d5581e3a635ebdcd708133a)
+
 ---
 
 ## 🖥 Infrastructure Experience
