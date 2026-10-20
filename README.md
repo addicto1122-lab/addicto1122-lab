@@ -86,8 +86,6 @@ Java와 Spring 기반의 백엔드 개발을 중심으로 공부하며
 ## 📂 Portfolio
 
 - 💻 **Development** · [Development Portfolio](https://lying-sauce-1dc.notion.site/3e1a87937d55813d8edafd73f05f27ea?source=copy_link)
-- 🖥️ **Infrastructure** · [Infrastructure Portfolio](https://lying-sauce-1dc.notion.site/3e2a87937d55818eb0dbf06167cf1578?source=copy_link)
-- 🌿 **Mood&Move** · [Project Portfolio](https://app.notion.com/p/3faa87937d5581bd929be033523a59c6)
 
 ---
 
